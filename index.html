@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win Free Gaming Credits</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://wallpapercave.com/wp/wp6594881.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+    header {
+      background-color: rgba(0,0,0,0.7);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: rgba(0,0,0,0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    .giftcards {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .giftcards img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
+    }
+    .giftcards img:hover {
+      transform: scale(1.08);
+    }
+    .countdown {
+      text-align: center;
+      font-size: 1.8em;
+      margin: 15px 0;
+      color: #ff4444;
+      font-weight: bold;
+    }
+    .cta-button {
+      background-color: #28a745;
+      color: #fff;
+      font-size: 1.4em;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+      text-decoration: none;
+      font-weight: bold;
+      animation: pulse 1.5s infinite;
+    }
+    .cta-button:hover {
+      background-color: #218838;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .comments {
+      margin-top: 30px;
+      font-size: 1em;
+      line-height: 1.6;
+      text-align: left;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .comment {
+      background-color: rgba(255,255,255,0.1);
+      padding: 12px;
+      margin: 12px 0;
+      border-left: 4px solid #28a745;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      animation: fadeIn 0.6s ease;
+    }
+    .comment img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    .comment .comment-name {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5em;
+      }
+      .cta-button {
+        font-size: 1.1em;
+      }
+      .giftcards img {
+        width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🎮 Win Free Gaming Credits! 🎁
+  </header>
+
+  <div class="container">
+    <h2>Install and Claim your free gift card now! Limited time only.</h2>
+    <p>Get your gaming credits today! Follow the simple steps below to claim your free card. Hurry, offer ends soon!</p>
+    
+    <!-- Gift Card Images -->
+    <div class="giftcards">
+      <img src="https://1000logos.net/wp-content/uploads/2021/06/Steam-logo.png" alt="Steam Gift Card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/PlayStation_logo.svg" alt="PSN Gift Card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox_one_logo.svg" alt="Xbox Gift Card">
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown" id="countdown">Loading...</div>
+
+    <a href="https://ogads.com/myofferlink123" class="cta-button" target="_blank">
+      INSTALL NOW
+    </a>
+
+    <div class="comments" id="comments">
+      <!-- Comments will load dynamically -->
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer (set to 1 hour from load)
+    function startCountdown(duration) {
+      let timer = duration, minutes, seconds, hours;
+      const countdownEl = document.getElementById('countdown');
+      setInterval(() => {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        countdownEl.textContent = `⏳ Offer ends in ${hours}:${minutes}:${seconds}`;
+
+        if (--timer < 0) {
+          timer = duration; // restart timer
+        }
+      }, 1000);
+    }
+
+    // Dynamic Comments
+    const commentsData = [
+      {name: "ghostgame", img: "https://i.pravatar.cc/40?img=12", text: "I just got my Steam card! 🔥 Thanks!"},
+      {name: "MehdiDZ", img: "https://i.pravatar.cc/40?img=32", text: "Ça marche vraiment 😱 J’ai reçu 10€ PSN."},
+      {name: "LoloYT", img: "https://i.pravatar.cc/40?img=56", text: "Easy steps and boom, gift received! 🎁"},
+      {name: "edwardPlay", img: "https://i.pravatar.cc/40?img=20", text: "This is legit 💯 got my Xbox code in 2 mins."},
+      {name: "AhmedPro", img: "https://i.pravatar.cc/40?img=15", text: "Wow 🔥🔥 je viens d’avoir 20€ Steam gift card!"},
+      {name: "ZoeKawaii", img: "https://i.pravatar.cc/40?img=8", text: "So easy omg 😍 thanks a lot!"}
+    ];
+
+    let commentIndex = 0;
+    function showNextComment() {
+      const commentsEl = document.getElementById("comments");
+      const comment = commentsData[commentIndex];
+      const div = document.createElement("div");
+      div.classList.add("comment");
+      div.innerHTML = `<img src="${comment.img}" alt="user">
+        <p><span class="comment-name">${comment.name}:</span> ${comment.text}</p>`;
+      commentsEl.prepend(div); // new comment on top
+
+      commentIndex = (commentIndex + 1) % commentsData.length;
+    }
+
+    window.onload = function () {
+      const oneHour = 60 * 60; // 1 hour
+      startCountdown(oneHour);
+
+      // Load first 3 comments instantly
+      for (let i = 0; i < 3; i++) {
+        showNextComment();
+      }
+      // Then add new ones every 6 seconds
+      setInterval(showNextComment, 6000);
+    };
+  </script>
+
+</body>
+</html>
